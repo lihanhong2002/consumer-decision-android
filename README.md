@@ -18,6 +18,14 @@ Android 8.0（API 26）及以上可安装。Release 提供调试 APK、完整源
 
 环境使用 JDK 17、AGP 9.1.1、Gradle 9.3.1、Room 2.8.5。SDK 36，最低 Android 8/API 26。项目位于中文目录时已启用 AGP 路径检查兼容配置。
 
+## 六模型 Skill
+
+[six-model-consumption](skills/six-model-consumption/SKILL.md) 将六模型规范整理为可复用的 AI 技能，支持一次一题的消费问答、手动补充、通俗解释、模型计算与实现审查。理论依赖 V4.2.1，附完整软件规范 V1.0.0，并明确区分理论规则和 App 工程扩展；AI 建议的参数仍须用户确认，不自动生成综合分数。
+
+将整个 `skills/six-model-consumption` 文件夹复制到支持 `SKILL.md` 的客户端技能目录，保留 `agents`、`references` 和 `LICENSE`。可用提示词：`使用 $six-model-consumption，帮我比较继续使用、维修和换新，一次问一题，以选项为主。` 客户端需自行提供模型和计算工具，Skill 不包含服务密钥或 Android 运行环境，也不是模型训练权重。
+
+Skill 同样采用 MIT，可独立分发。其附带规范是 `docs/reference/Software_Spec_V1_0.md` 的完整副本，维护时须同步更新两份文件。发布标签 `v0.2.0` 的原始 APK 和源码附件保持不变，新增 Skill 位于当前 `main` 分支。
+
 ## 本地构建
 
 首次环境已安装至 `.tools`（不纳入源码）。其他机器需要 JDK 17、Android SDK 36，并在 `local.properties` 设置 `sdk.dir`。

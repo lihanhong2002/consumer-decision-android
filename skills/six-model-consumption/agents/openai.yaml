@@ -1,0 +1,4 @@
+interface:
+  display_name: "六模型理性消费"
+  short_description: "用通俗问答核实参数，比较购买、维修与等待方案，解释六模型取舍"
+  default_prompt: "使用 $six-model-consumption，按六模型帮我分析这次消费决策，一次问一题，以选项为主并允许自由补充。"
